@@ -1,0 +1,23 @@
+:root {
+  --bg: #0a0a0b;
+  --text: #ececec;
+  --muted: #9b9b9f;
+  --accent: #e5141c;
+  --accent-glow: rgba(229, 20, 28, 0.45);
+  --glass: rgba(18, 18, 20, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --radius-card: 14px;
+  --radius-pill: 999px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --fs-display: clamp(2.75rem, 6vw, 5.5rem);
+  --fs-title: clamp(2.25rem, 4.6vw, 3.75rem);
+  --ls-display: -0.035em;
+  --fw-display: 400;
+
+  --font: 'Inter Tight', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --gutter: clamp(16px, 4.5vw, 72px);
+  --nav-h: 84px;
+  --maxw: 1300px;
+  --maxw-wide: 1920px;
+}

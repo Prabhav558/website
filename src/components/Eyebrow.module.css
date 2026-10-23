@@ -1,0 +1,16 @@
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  color: var(--text);
+}
+.line {
+  display: block;
+  width: 56px;
+  height: 1px;
+  background: var(--accent);
+}

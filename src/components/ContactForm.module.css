@@ -1,0 +1,21 @@
+.form { display: flex; flex-direction: column; gap: 14px; position: relative; }
+.honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: 0.75rem; font-weight: 500; color: var(--text); }
+.field input, .field textarea {
+  width: 100%; font: inherit; font-size: 0.8rem; color: var(--text);
+  background: rgba(8, 8, 10, 0.55); border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px; padding: 11px 12px; outline: none; resize: vertical;
+  box-sizing: border-box; transition: border-color 0.2s, box-shadow 0.2s;
+}
+.field textarea { min-height: 84px; }
+.field input::placeholder, .field textarea::placeholder { color: var(--muted); opacity: 0.7; }
+.field input:focus, .field textarea:focus {
+  border-color: var(--accent); box-shadow: 0 0 0 3px rgba(229, 20, 28, 0.2), 0 0 18px rgba(229, 20, 28, 0.25);
+}
+.field input[aria-invalid='true'], .field textarea[aria-invalid='true'] { border-color: var(--accent); }
+.error { margin: 0; font-size: 0.72rem; color: #ff6b70; }
+.submit { margin-top: 4px; }
+.success, .errorNote { margin: 0; font-size: 0.8rem; line-height: 1.5; color: var(--muted); }
+.success { color: var(--text); }
+.errorNote a { color: var(--accent); text-decoration: underline; }

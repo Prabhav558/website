@@ -1,0 +1,32 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 20px 22px;
+  min-height: 120px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.value {
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.icon {
+  color: var(--accent);
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+}
+.label {
+  font-size: 0.875rem;
+  color: var(--muted);
+}

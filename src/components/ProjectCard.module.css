@@ -1,0 +1,98 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-card, 14px);
+  background: var(--glass, rgba(14, 14, 16, 0.6));
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  min-height: 21rem;
+  will-change: transform;
+}
+
+.media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.mediaInner {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+.mediaFade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 18%, rgba(10, 10, 11, 0.55) 48%, rgba(10, 10, 11, 0.9) 78%);
+  pointer-events: none;
+}
+
+/* distinct placeholder glow compositions (visible when there is no src) */
+.glow0 {
+  background: radial-gradient(ellipse 42% 55% at 62% 62%, rgba(229, 20, 28, 0.5), transparent 70%),
+    linear-gradient(160deg, #1a1a1d, #0c0c0e);
+}
+.glow1 {
+  background: radial-gradient(ellipse 8% 70% at 50% 55%, rgba(229, 20, 28, 0.7), transparent 75%),
+    radial-gradient(ellipse 50% 30% at 50% 100%, rgba(229, 20, 28, 0.35), transparent 70%),
+    linear-gradient(180deg, #161618, #0b0b0d);
+}
+.glow2 {
+  background: radial-gradient(circle at 30% 40%, rgba(229, 20, 28, 0.45), transparent 55%),
+    radial-gradient(ellipse 40% 30% at 75% 85%, rgba(229, 20, 28, 0.3), transparent 70%),
+    linear-gradient(200deg, #1c1c1f, #0b0b0d);
+}
+
+.body {
+  position: relative;
+  margin-top: auto;
+  padding: 8.5rem 1.4rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+}
+.number {
+  font-size: 0.75rem;
+  color: var(--muted, #9b9b9f);
+  letter-spacing: 0.08em;
+}
+.title {
+  margin: 0;
+  font-size: clamp(1.5rem, 2vw, 1.9rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--text, #ececec);
+}
+.row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.desc {
+  margin: 0;
+  max-width: 34ch;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--muted, #9b9b9f);
+}
+.arrow {
+  flex: none;
+  border-radius: 50%;
+  will-change: transform;
+  transition: box-shadow 0.35s var(--ease-out, ease-out);
+}
+.arrowHot {
+  box-shadow: 0 0 0 5px rgba(229, 20, 28, 0.18), 0 0 24px 2px var(--accent-glow, rgba(229, 20, 28, 0.55));
+}
+.tags {
+  list-style: none;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
